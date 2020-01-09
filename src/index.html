@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Noms ciutats</title>
+</head>
+<body>
+	<p>Entra el nom de sis ciutats:</p>
+	<p>
+		Ciutat 1: <input type="text" id="ciutat1"><br> Ciutat 2:
+		<input type="text" id="ciutat2"><br> Ciutat 3: <input
+			type="text" id="ciutat3"><br> Ciutat 4: <input
+			type="text" id="ciutat4"><br> Ciutat 5: <input
+			type="text" id="ciutat5"><br> Ciutat 6: <input
+			type="text" id="ciutat6"><br>
+		<button type="button" onclick="nomsCiutats()">Executa</button>
+	</p>
+
+	<script>
+		function nomsCiutats() {
+			//FASE 1
+			/*
+			 * Crea sis variables tipu string buides. (0,5 punts)
+			 * Demana per consola que sâ€™introdueixin els noms. (0,5 punts)
+			 * Introdueix els segÃ¼ents noms de ciutats (Barcelona, Madrid, Valencia, Malaga, Cadis, Santander) per
+			 * teclat. (0,5 punts)
+			 * Mostra per consola el nom de les 6 ciutats. (0,5 punts)
+			 */
+			var ciutat1 = "";
+			var ciutat2 = "";
+			var ciutat3 = "";
+			var ciutat4 = "";
+			var ciutat5 = "";
+			var ciutat6 = "";
+			ciutat1 = document.getElementById("ciutat1").value;
+			ciutat2 = document.getElementById("ciutat2").value;
+			ciutat3 = document.getElementById("ciutat3").value;
+			ciutat4 = document.getElementById("ciutat4").value;
+			ciutat5 = document.getElementById("ciutat5").value;
+			ciutat6 = document.getElementById("ciutat6").value;
+			document.write("1. Mostra el nom de les 6 ciutats:<br>");
+			document.write(ciutat1 + "<br>");
+			document.write(ciutat2 + "<br>");
+			document.write(ciutat3 + "<br>");
+			document.write(ciutat4 + "<br>");
+			document.write(ciutat5 + "<br>");
+			document.write(ciutat6 + "<br>");
+			/*
+			 * FASE 2: Un cop tenim els noms de les ciutats guardats en variables haurem de pasar
+			 * lâ€™informacio a un array (arrayCiutats). (1 punt) â—� Quan tinguem lâ€™array ple,
+			 * haurem de mostrar per consola el nom de les ciutats ordenadas per ordre
+			 * alfabetic. (1 punt)
+			 */
+			var arrayCiutats = [ ciutat1, ciutat2, ciutat3, ciutat4, ciutat5,
+					ciutat6 ];
+			arrayCiutats.sort();
+			document
+					.write("2. Nom de les 6 ciutats ordenades alfabèticament:<br>");
+			for (var i = 0; i < arrayCiutats.length; i++) {
+				document.write(arrayCiutats[i] + "<br>");
+			}
+			//FASE 3:
+			/*
+			 * Cambieu les vocals â€œaâ€� dels noms de les ciutats per el numero 4 i guardeu
+			 * els noms modificats en un nou array(ArrayCiutatsModificades). (2 punts) â—�
+			 * Mostreu per consola lâ€™array modificat i ordenat per ordre alfabetic. (1 punt)
+			 */
+			arrayCiutatsModificades = new Array();
+			for (var i = 0; i < arrayCiutats.length; i++) {
+				arrayCiutatsModificades[i] = arrayCiutats[i]
+						.replace(/a/gi, "4");
+			}
+			arrayCiutatsModificades.sort();
+			document
+					.write("3. Nom de les 6 ciutats amb el caràcter \'a\' canviat per \'4\' i reordenat alfabèticament:<br>");
+			for (var i = 0; i < arrayCiutatsModificades.length; i++) {
+				document.write(arrayCiutatsModificades[i] + "<br>");
+			}
+			//FASE 4 
+			/*
+			 * Creeu un nou array per cada una de les ciutats que tenim. La mida dels nous
+			 * arrays sera la llargada de cada string ( string nomCiutat.Length). (0,5
+			 * punts) ● Ompliu els nous arrays lletra per lletra.(2 punts) ● Mostreu per
+			 * consola els nous arrays amb els noms invertits (Ex: Barcelona - anolecraB).
+			 * (0,5 punts)
+			 */
+			arrayCiutat1 = new Array(arrayCiutats[0].length);
+			arrayCiutat2 = new Array(arrayCiutats[1].length);
+			arrayCiutat3 = new Array(arrayCiutats[2].length);
+			arrayCiutat4 = new Array(arrayCiutats[3].length);
+			arrayCiutat5 = new Array(arrayCiutats[4].length);
+			arrayCiutat6 = new Array(arrayCiutats[5].length);
+
+			document.write("4. Noms de les ciutats invertits:<br>");
+
+			for (var i = 0; i < arrayCiutat1.length; i++) {
+				arrayCiutat1[i] = arrayCiutats[0].charAt(i);
+			}
+			arrayCiutat1.reverse();
+			for (var k = 0; k < arrayCiutat1.length; k++) {
+				document.write(arrayCiutat1[k]);
+			}
+			document.write("<br>");
+
+			for (var i = 0; i < arrayCiutat2.length; i++) {
+				arrayCiutat2[i] = arrayCiutats[1].charAt(i);
+			}
+			arrayCiutat2.reverse();
+			for (var k = 0; k < arrayCiutat2.length; k++) {
+				document.write(arrayCiutat2[k]);
+			}
+			document.write("<br>");
+
+			for (var i = 0; i < arrayCiutat3.length; i++) {
+				arrayCiutat3[i] = arrayCiutats[2].charAt(i);
+			}
+			arrayCiutat3.reverse();
+			for (var k = 0; k < arrayCiutat3.length; k++) {
+				document.write(arrayCiutat3[k]);
+			}
+			document.write("<br>");
+
+			for (var i = 0; i < arrayCiutat4.length; i++) {
+				arrayCiutat4[i] = arrayCiutats[3].charAt(i);
+			}
+			arrayCiutat4.reverse();
+			for (var k = 0; k < arrayCiutat4.length; k++) {
+				document.write(arrayCiutat4[k]);
+			}
+			document.write("<br>");
+
+			for (var i = 0; i < arrayCiutat5.length; i++) {
+				arrayCiutat5[i] = arrayCiutats[4].charAt(i);
+			}
+			arrayCiutat5.reverse();
+			for (var k = 0; k < arrayCiutat5.length; k++) {
+				document.write(arrayCiutat5[k]);
+			}
+			document.write("<br>");
+
+			for (var i = 0; i < arrayCiutat6.length; i++) {
+				arrayCiutat6[i] = arrayCiutats[5].charAt(i);
+			}
+			arrayCiutat6.reverse();
+			for (var k = 0; k < arrayCiutat6.length; k++) {
+				document.write(arrayCiutat6[k]);
+			}
+			document.write("<br>");
+		}
+	</script>
+</body>
+</html>
