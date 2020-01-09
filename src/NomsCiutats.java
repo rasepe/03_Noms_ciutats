@@ -30,7 +30,7 @@ System.out.println("Introdueix ciutat 1:");
 		 ciutat5 = sc.nextLine();
 		 System.out.println("Introdueix ciutat 6:");
 		 ciutat6 = sc.nextLine();
-		 System.out.println("Nom de les 6 ciutats:");
+		 System.out.println("1. Nom de les 6 ciutats:");
 		 System.out.println(ciutat1);
 		 System.out.println(ciutat2);
 		 System.out.println(ciutat3);
@@ -54,7 +54,7 @@ System.out.println("Introdueix ciutat 1:");
 		 
 		 Arrays.sort(arrayCiutats);
 		 
-		 System.out.println("Nom de les 6 ciutats ordenades alfabèticament:");
+		 System.out.println("2. Nom de les 6 ciutats ordenades alfabèticament:");
 		 for (int i=0; i<arrayCiutats.length ; i++) {
 			 System.out.println(arrayCiutats[i]);
 		 }
@@ -64,14 +64,15 @@ System.out.println("Introdueix ciutat 1:");
 		 * els noms modificats en un nou array(ArrayCiutatsModificades). (2 punts) â—�
 		 * Mostreu per consola lâ€™array modificat i ordenat per ordre alfabetic. (1 punt)
 		 */
+		 String[] arrayCiutatsModificades = new String[6];
 		 for (int i=0; i<arrayCiutats.length ; i++) {
-			 arrayCiutats[i] = arrayCiutats[i].replace('a', '4');
+			 arrayCiutatsModificades[i] = arrayCiutats[i].replace('a', '4');
 			 //System.out.println(arrayCiutats[i]);
 		 }
-		 Arrays.sort(arrayCiutats);
-		 System.out.println("Nom de les 6 ciutats amb el caràcter \'a\' canviat per \'4\' i reordenat alfabèticament");
-		 for (int i=0; i<arrayCiutats.length ; i++) {
-			 System.out.println(arrayCiutats[i]);
+		 Arrays.sort(arrayCiutatsModificades);
+		 System.out.println("3. Nom de les 6 ciutats amb el caràcter \'a\' canviat per \'4\' i reordenat alfabèticament:");
+		 for (int i=0; i<arrayCiutatsModificades.length ; i++) {
+			 System.out.println(arrayCiutatsModificades[i]);
 		 }
 		 //FASE 4 
 		/*
@@ -88,7 +89,7 @@ System.out.println("Introdueix ciutat 1:");
 		 char[] arrayCiutat5 = new char[arrayCiutats[4].length()];
 		 char[] arrayCiutat6 = new char[arrayCiutats[5].length()];
 		 
-		 System.out.println("Els mateixos noms invertits");
+		 System.out.println("4. Noms de les ciutats invertits:");
 		 for (int i=0; i<arrayCiutat1.length ; i++) {
 			 arrayCiutat1[i] = arrayCiutats[0].charAt(i);
 		 }
